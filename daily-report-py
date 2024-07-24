@@ -1,0 +1,13 @@
+# daily_report.py
+from datetime import datetime
+
+def generate_report():
+    date_str = datetime.now().strftime("%Y-%m-%d")
+    report_content = f"Daily Report for {date_str}\n\n"
+    report_content += "Report details go here."
+
+    with open("report.txt", "w") as file:
+        file.write(report_content)
+
+if __name__ == "__main__":
+    generate_report()
